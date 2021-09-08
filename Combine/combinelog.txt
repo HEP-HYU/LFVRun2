@@ -1,684 +1,814 @@
-Command : combine datacards/datacard_countingLFVstc_s_16.txt --run blind -n .stc_s_16 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/st/datacard_countingLFVc_s_Run2.txt --run blind -n .st_c_s_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 1.3195
-Expected 16.0%: r < 1.7672
-Expected 50.0%: r < 2.4656
-Expected 84.0%: r < 3.4779
-Expected 97.5%: r < 4.6870
+Expected  2.5%: r < 1.6506
+Expected 16.0%: r < 2.2107
+Expected 50.0%: r < 3.0844
+Expected 84.0%: r < 4.3384
+Expected 97.5%: r < 5.8546
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstc_v_16.txt --run blind -n .stc_v_16 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/st/datacard_countingLFVc_v_Run2.txt --run blind -n .st_c_v_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.2973
-Expected 16.0%: r < 0.3981
-Expected 50.0%: r < 0.5555
-Expected 84.0%: r < 0.7813
-Expected 97.5%: r < 1.0544
+Expected  2.5%: r < 0.3512
+Expected 16.0%: r < 0.4704
+Expected 50.0%: r < 0.6562
+Expected 84.0%: r < 0.9204
+Expected 97.5%: r < 1.2396
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstc_t_16.txt --run blind -n .stc_t_16 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/st/datacard_countingLFVc_t_Run2.txt --run blind -n .st_c_t_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0712
-Expected 16.0%: r < 0.0948
-Expected 50.0%: r < 0.1330
-Expected 84.0%: r < 0.1866
-Expected 97.5%: r < 0.2512
+Expected  2.5%: r < 0.0774
+Expected 16.0%: r < 0.1032
+Expected 50.0%: r < 0.1436
+Expected 84.0%: r < 0.2019
+Expected 97.5%: r < 0.2725
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_s_16.txt --run blind -n .stu_s_16 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/st/datacard_countingLFVu_s_Run2.txt --run blind -n .st_u_s_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.1135
-Expected 16.0%: r < 0.1520
-Expected 50.0%: r < 0.2121
-Expected 84.0%: r < 0.2975
-Expected 97.5%: r < 0.4020
+Expected  2.5%: r < 0.1367
+Expected 16.0%: r < 0.1831
+Expected 50.0%: r < 0.2555
+Expected 84.0%: r < 0.3583
+Expected 97.5%: r < 0.4826
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_v_16.txt --run blind -n .stu_v_16 --rMin 0.0001 --rMax 1.0
+Command : combine newdatacards/st/datacard_countingLFVu_v_Run2.txt --run blind -n .st_u_v_Run2 --rMin 0.0001 --rMax 1.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0265
-Expected 16.0%: r < 0.0354
-Expected 50.0%: r < 0.0492
-Expected 84.0%: r < 0.0692
-Expected 97.5%: r < 0.0934
+Expected  2.5%: r < 0.0307
+Expected 16.0%: r < 0.0410
+Expected 50.0%: r < 0.0570
+Expected 84.0%: r < 0.0802
+Expected 97.5%: r < 0.1075
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_t_16.txt --run blind -n .stu_t_16 --rMin 0.0001 --rMax 0.1
+Command : combine newdatacards/st/datacard_countingLFVu_t_Run2.txt --run blind -n .st_u_t_Run2 --rMin 0.0001 --rMax 0.05
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0065
-Expected 16.0%: r < 0.0090
-Expected 50.0%: r < 0.0122
-Expected 84.0%: r < 0.0172
-Expected 97.5%: r < 0.0237
+Expected  2.5%: r < 0.0071
+Expected 16.0%: r < 0.0098
+Expected 50.0%: r < 0.0133
+Expected 84.0%: r < 0.0188
+Expected 97.5%: r < 0.0252
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_s_16.txt --run blind -n .ttc_s_16 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/tt/datacard_countingLFVc_s_Run2.txt --run blind -n .tt_c_s_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 43.8159
-Expected 16.0%: r < 58.6827
-Expected 50.0%: r < 81.8750
-Expected 84.0%: r < 114.8371
-Expected 97.5%: r < 154.6578
+Expected  2.5%: r < 35.1196
+Expected 16.0%: r < 47.0358
+Expected 50.0%: r < 65.6250
+Expected 84.0%: r < 92.0450
+Expected 97.5%: r < 123.9623
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_v_16.txt --run blind -n .ttc_v_16 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/tt/datacard_countingLFVc_v_Run2.txt --run blind -n .tt_c_v_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 5.8115
-Expected 16.0%: r < 7.7833
-Expected 50.0%: r < 10.8594
-Expected 84.0%: r < 15.2313
-Expected 97.5%: r < 20.5128
+Expected  2.5%: r < 4.3247
+Expected 16.0%: r < 5.7921
+Expected 50.0%: r < 8.0813
+Expected 84.0%: r < 11.3347
+Expected 97.5%: r < 15.3168
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_t_16.txt --run blind -n .ttc_t_16 --rMin 0.0001 --rMax 100
- <<< Combine >>> 
->>> random number generator seed is 123456
-Will use a-priori expected background instead of a-posteriori one.
->>> method used is AsymptoticLimits
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(model_s) evaluation error, 
- origin       : RooProdPdf::model_s[ modelObs_s * nuisancePdf ]
- message      : getLogVal() top-level p.d.f evaluates to zero
- server values: !pdfs=(modelObs_s = 0/1,nuisancePdf = 1)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset_) evaluation error, 
- origin       : RooNLLVar::nll_model_s__Asymptotic_asimovDataset_[ paramSet=(lumieff18,n_exp_binbin1_proc_others,r) ]
- message      : function value is NAN
- server values: paramSet=(lumieff18 = -0.013391 +/- 1.63217,n_exp_binbin1_proc_others = 0,r = 50 +/- 20.5128)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset__with_constr) evaluation error, 
- origin       : RooAddition::nll_model_s__Asymptotic_asimovDataset__with_constr[ nll_model_s__Asymptotic_asimovDataset_ + nll_model_s__Asymptotic_asimovDataset__constr ]
- message      : function value is NAN
- server values: !set=(nll_model_s__Asymptotic_asimovDataset_ = -nan,nll_model_s__Asymptotic_asimovDataset__constr = 0.919028)
-
- -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.9825
-Expected 16.0%: r < 1.3159
-Expected 50.0%: r < 1.8359
-Expected 84.0%: r < 2.5751
-Expected 97.5%: r < 3.4797
-
-Done in 0.00 min (cpu), 0.00 min (real)
-
-######################################
-
-Command : combine datacards/datacard_countingLFVttu_s_16.txt --run blind -n .ttu_s_16 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/tt/datacard_countingLFVc_t_Run2.txt --run blind -n .tt_c_t_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 41.6089
-Expected 16.0%: r < 55.5068
-Expected 50.0%: r < 77.1875
-Expected 84.0%: r < 108.5701
-Expected 97.5%: r < 146.5124
+Expected  2.5%: r < 0.6443
+Expected 16.0%: r < 0.8596
+Expected 50.0%: r < 1.1953
+Expected 84.0%: r < 1.6813
+Expected 97.5%: r < 2.2612
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttu_v_16.txt --run blind -n .ttu_v_16 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/tt/datacard_countingLFVu_s_Run2.txt --run blind -n .tt_u_s_Run2 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 5.4561
-Expected 16.0%: r < 7.3073
-Expected 50.0%: r < 10.1953
-Expected 84.0%: r < 14.2998
-Expected 97.5%: r < 19.3237
+Expected  2.5%: r < 24.6439
+Expected 16.0%: r < 33.0057
+Expected 50.0%: r < 46.0500
+Expected 84.0%: r < 64.5893
+Expected 97.5%: r < 87.2808
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttu_t_16.txt --run blind -n .ttu_t_16 --rMin 0.0001 --rMax 100
- <<< Combine >>> 
->>> random number generator seed is 123456
-Will use a-priori expected background instead of a-posteriori one.
->>> method used is AsymptoticLimits
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(model_s) evaluation error, 
- origin       : RooProdPdf::model_s[ modelObs_s * nuisancePdf ]
- message      : getLogVal() top-level p.d.f evaluates to zero
- server values: !pdfs=(modelObs_s = 0/1,nuisancePdf = 1)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset_) evaluation error, 
- origin       : RooNLLVar::nll_model_s__Asymptotic_asimovDataset_[ paramSet=(lumieff18,n_exp_binbin1_proc_others,r) ]
- message      : function value is NAN
- server values: paramSet=(lumieff18 = -0.0142337 +/- 1.63142,n_exp_binbin1_proc_others = 0,r = 50 +/- 18.2384)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset__with_constr) evaluation error, 
- origin       : RooAddition::nll_model_s__Asymptotic_asimovDataset__with_constr[ nll_model_s__Asymptotic_asimovDataset_ + nll_model_s__Asymptotic_asimovDataset__constr ]
- message      : function value is NAN
- server values: !set=(nll_model_s__Asymptotic_asimovDataset_ = -nan,nll_model_s__Asymptotic_asimovDataset__constr = 0.91904)
-
- -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.9250
-Expected 16.0%: r < 1.2389
-Expected 50.0%: r < 1.7285
-Expected 84.0%: r < 2.4244
-Expected 97.5%: r < 3.2651
-
-Done in 0.00 min (cpu), 0.00 min (real)
-
-######################################
-
-Command : combine datacards/datacard_countingLFVstc_s_17.txt --run blind -n .stc_s_17 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/tt/datacard_countingLFVu_v_Run2.txt --run blind -n .tt_u_v_Run2 --rMin 0.0001 --rMax 1.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 1.3295
-Expected 16.0%: r < 1.7716
-Expected 50.0%: r < 2.4844
-Expected 84.0%: r < 3.4846
-Expected 97.5%: r < 4.7088
+Expected  2.5%: r < 2.6958
+Expected 16.0%: r < 3.6106
+Expected 50.0%: r < 5.0375
+Expected 84.0%: r < 7.0655
+Expected 97.5%: r < 9.4833
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstc_v_17.txt --run blind -n .stc_v_17 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/tt/datacard_countingLFVu_t_Run2.txt --run blind -n .tt_u_t_Run2 --rMin 0.0001 --rMax 0.05
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.2985
-Expected 16.0%: r < 0.3998
-Expected 50.0%: r < 0.5578
-Expected 84.0%: r < 0.7846
-Expected 97.5%: r < 1.0588
+Expected  2.5%: r < 0.2963
+Expected 16.0%: r < 0.3969
+Expected 50.0%: r < 0.5537
+Expected 84.0%: r < 0.7767
+Expected 97.5%: r < 1.0495
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstc_t_17.txt --run blind -n .stc_t_17 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/st/datacard_countingLFVc_s_Run16.txt --run blind -n .st_c_s_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0712
-Expected 16.0%: r < 0.0953
-Expected 50.0%: r < 0.1330
-Expected 84.0%: r < 0.1871
-Expected 97.5%: r < 0.2525
+Expected  2.5%: r < 2.4584
+Expected 16.0%: r < 3.2925
+Expected 50.0%: r < 4.5938
+Expected 84.0%: r < 6.4798
+Expected 97.5%: r < 8.7324
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_s_17.txt --run blind -n .stu_s_17 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/st/datacard_countingLFVc_v_Run16.txt --run blind -n .st_c_v_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.1138
-Expected 16.0%: r < 0.1524
-Expected 50.0%: r < 0.2127
-Expected 84.0%: r < 0.2992
-Expected 97.5%: r < 0.4037
+Expected  2.5%: r < 0.5218
+Expected 16.0%: r < 0.6988
+Expected 50.0%: r < 0.9750
+Expected 84.0%: r < 1.3753
+Expected 97.5%: r < 1.8534
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_v_17.txt --run blind -n .stu_v_17 --rMin 0.0001 --rMax 1.0
+Command : combine newdatacards/st/datacard_countingLFVc_t_Run16.txt --run blind -n .st_c_t_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0267
-Expected 16.0%: r < 0.0357
-Expected 50.0%: r < 0.0496
-Expected 84.0%: r < 0.0698
-Expected 97.5%: r < 0.0935
+Expected  2.5%: r < 0.1145
+Expected 16.0%: r < 0.1533
+Expected 50.0%: r < 0.2139
+Expected 84.0%: r < 0.3017
+Expected 97.5%: r < 0.4065
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_t_17.txt --run blind -n .stu_t_17 --rMin 0.0001 --rMax 0.1
+Command : combine newdatacards/st/datacard_countingLFVu_s_Run16.txt --run blind -n .st_u_s_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0066
-Expected 16.0%: r < 0.0092
-Expected 50.0%: r < 0.0125
-Expected 84.0%: r < 0.0177
-Expected 97.5%: r < 0.0237
+Expected  2.5%: r < 0.2032
+Expected 16.0%: r < 0.2721
+Expected 50.0%: r < 0.3797
+Expected 84.0%: r < 0.5356
+Expected 97.5%: r < 0.7218
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_s_17.txt --run blind -n .ttc_s_17 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/st/datacard_countingLFVu_v_Run16.txt --run blind -n .st_u_v_Run16 --rMin 0.0001 --rMax 1.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 44.3176
-Expected 16.0%: r < 59.3547
-Expected 50.0%: r < 82.8125
-Expected 84.0%: r < 116.1520
-Expected 97.5%: r < 156.9586
+Expected  2.5%: r < 0.0454
+Expected 16.0%: r < 0.0608
+Expected 50.0%: r < 0.0848
+Expected 84.0%: r < 0.1196
+Expected 97.5%: r < 0.1611
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_v_17.txt --run blind -n .ttc_v_17 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/st/datacard_countingLFVu_t_Run16.txt --run blind -n .st_u_t_Run16 --rMin 0.0001 --rMax 0.05
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 5.8742
-Expected 16.0%: r < 7.8673
-Expected 50.0%: r < 10.9766
-Expected 84.0%: r < 15.3956
-Expected 97.5%: r < 20.8044
+Expected  2.5%: r < 0.0108
+Expected 16.0%: r < 0.0141
+Expected 50.0%: r < 0.0197
+Expected 84.0%: r < 0.0275
+Expected 97.5%: r < 0.0374
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_t_17.txt --run blind -n .ttc_t_17 --rMin 0.0001 --rMax 100
- <<< Combine >>> 
->>> random number generator seed is 123456
-Will use a-priori expected background instead of a-posteriori one.
->>> method used is AsymptoticLimits
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(model_s) evaluation error, 
- origin       : RooProdPdf::model_s[ modelObs_s * nuisancePdf ]
- message      : getLogVal() top-level p.d.f evaluates to zero
- server values: !pdfs=(modelObs_s = 0/1,nuisancePdf = 1)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset_) evaluation error, 
- origin       : RooNLLVar::nll_model_s__Asymptotic_asimovDataset_[ paramSet=(lumieff18,n_exp_binbin1_proc_others,r) ]
- message      : function value is NAN
- server values: paramSet=(lumieff18 = -0.0015258 +/- 1.62976,n_exp_binbin1_proc_others = 0,r = 50 +/- 93.226)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset__with_constr) evaluation error, 
- origin       : RooAddition::nll_model_s__Asymptotic_asimovDataset__with_constr[ nll_model_s__Asymptotic_asimovDataset_ + nll_model_s__Asymptotic_asimovDataset__constr ]
- message      : function value is NAN
- server values: !set=(nll_model_s__Asymptotic_asimovDataset_ = -nan,nll_model_s__Asymptotic_asimovDataset__constr = 0.91894)
-
- -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.9956
-Expected 16.0%: r < 1.3334
-Expected 50.0%: r < 1.8604
-Expected 84.0%: r < 2.6093
-Expected 97.5%: r < 3.5141
-
-Done in 0.00 min (cpu), 0.00 min (real)
-
-######################################
-
-Command : combine datacards/datacard_countingLFVttu_s_17.txt --run blind -n .ttu_s_17 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/tt/datacard_countingLFVc_s_Run16.txt --run blind -n .tt_c_s_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 41.9763
-Expected 16.0%: r < 55.9341
-Expected 50.0%: r < 78.4375
-Expected 84.0%: r < 110.0157
-Expected 97.5%: r < 147.6625
+Expected  2.5%: r < 37.7285
+Expected 16.0%: r < 50.5299
+Expected 50.0%: r < 70.5000
+Expected 84.0%: r < 99.4446
+Expected 97.5%: r < 134.0151
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttu_v_17.txt --run blind -n .ttu_v_17 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/tt/datacard_countingLFVc_v_Run16.txt --run blind -n .tt_c_v_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 5.5188
-Expected 16.0%: r < 7.3913
-Expected 50.0%: r < 10.3125
-Expected 84.0%: r < 14.4642
-Expected 97.5%: r < 19.5458
+Expected  2.5%: r < 4.6458
+Expected 16.0%: r < 6.2222
+Expected 50.0%: r < 8.6812
+Expected 84.0%: r < 12.2454
+Expected 97.5%: r < 16.5024
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttu_t_17.txt --run blind -n .ttu_t_17 --rMin 0.0001 --rMax 100
- <<< Combine >>> 
->>> random number generator seed is 123456
-Will use a-priori expected background instead of a-posteriori one.
->>> method used is AsymptoticLimits
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(model_s) evaluation error, 
- origin       : RooProdPdf::model_s[ modelObs_s * nuisancePdf ]
- message      : getLogVal() top-level p.d.f evaluates to zero
- server values: !pdfs=(modelObs_s = 0/1,nuisancePdf = 1)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset_) evaluation error, 
- origin       : RooNLLVar::nll_model_s__Asymptotic_asimovDataset_[ paramSet=(lumieff18,n_exp_binbin1_proc_others,r) ]
- message      : function value is NAN
- server values: paramSet=(lumieff18 = -0.00151298 +/- 1.63416,n_exp_binbin1_proc_others = 0,r = 50 +/- 92.1146)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset__with_constr) evaluation error, 
- origin       : RooAddition::nll_model_s__Asymptotic_asimovDataset__with_constr[ nll_model_s__Asymptotic_asimovDataset_ + nll_model_s__Asymptotic_asimovDataset__constr ]
- message      : function value is NAN
- server values: !set=(nll_model_s__Asymptotic_asimovDataset_ = -nan,nll_model_s__Asymptotic_asimovDataset__constr = 0.91894)
-
- -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.9355
-Expected 16.0%: r < 1.2529
-Expected 50.0%: r < 1.7480
-Expected 84.0%: r < 2.4518
-Expected 97.5%: r < 3.3132
-
-Done in 0.00 min (cpu), 0.00 min (real)
-
-######################################
-
-Command : combine datacards/datacard_countingLFVstc_s_18.txt --run blind -n .stc_s_18 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/tt/datacard_countingLFVc_t_Run16.txt --run blind -n .tt_c_t_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 1.2342
-Expected 16.0%: r < 1.6530
-Expected 50.0%: r < 2.3063
-Expected 84.0%: r < 3.2439
-Expected 97.5%: r < 4.3629
+Expected  2.5%: r < 0.6898
+Expected 16.0%: r < 0.9192
+Expected 50.0%: r < 1.2891
+Expected 84.0%: r < 1.8080
+Expected 97.5%: r < 2.4432
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstc_v_18.txt --run blind -n .stc_v_18 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/tt/datacard_countingLFVu_s_Run16.txt --run blind -n .tt_u_s_Run16 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.2792
-Expected 16.0%: r < 0.3725
-Expected 50.0%: r < 0.5180
-Expected 84.0%: r < 0.7306
-Expected 97.5%: r < 0.9813
+Expected  2.5%: r < 26.4902
+Expected 16.0%: r < 35.4784
+Expected 50.0%: r < 49.5000
+Expected 84.0%: r < 69.6255
+Expected 97.5%: r < 93.9578
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstc_t_18.txt --run blind -n .stc_t_18 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/tt/datacard_countingLFVu_v_Run16.txt --run blind -n .tt_u_v_Run16 --rMin 0.0001 --rMax 1.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.2217
-Expected 16.0%: r < 0.2958
-Expected 50.0%: r < 0.4113
-Expected 84.0%: r < 0.5736
-Expected 97.5%: r < 0.7667
+Expected  2.5%: r < 2.8965
+Expected 16.0%: r < 3.8597
+Expected 50.0%: r < 5.4125
+Expected 84.0%: r < 7.6131
+Expected 97.5%: r < 10.2737
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_s_18.txt --run blind -n .stu_s_18 --rMin 0.0001 --rMax 3.0
+Command : combine newdatacards/tt/datacard_countingLFVu_t_Run16.txt --run blind -n .tt_u_t_Run16 --rMin 0.0001 --rMax 0.05
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.1060
-Expected 16.0%: r < 0.1419
-Expected 50.0%: r < 0.1980
-Expected 84.0%: r < 0.2778
-Expected 97.5%: r < 0.3754
+Expected  2.5%: r < 0.3184
+Expected 16.0%: r < 0.4265
+Expected 50.0%: r < 0.5950
+Expected 84.0%: r < 0.8393
+Expected 97.5%: r < 1.1310
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_v_18.txt --run blind -n .stu_v_18 --rMin 0.0001 --rMax 1.0
+Command : combine newdatacards/st/datacard_countingLFVc_s_Run17.txt --run blind -n .st_c_s_Run17 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0248
-Expected 16.0%: r < 0.0331
-Expected 50.0%: r < 0.0461
-Expected 84.0%: r < 0.0648
-Expected 97.5%: r < 0.0869
+Expected  2.5%: r < 2.1715
+Expected 16.0%: r < 2.9199
+Expected 50.0%: r < 4.0875
+Expected 84.0%: r < 5.7657
+Expected 97.5%: r < 7.7700
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVstu_t_18.txt --run blind -n .stu_t_18 --rMin 0.0001 --rMax 0.1
+Command : combine newdatacards/st/datacard_countingLFVc_v_Run17.txt --run blind -n .st_c_v_Run17 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.0061
-Expected 16.0%: r < 0.0085
-Expected 50.0%: r < 0.0116
-Expected 84.0%: r < 0.0164
-Expected 97.5%: r < 0.0219
+Expected  2.5%: r < 0.4641
+Expected 16.0%: r < 0.6184
+Expected 50.0%: r < 0.8672
+Expected 84.0%: r < 1.2232
+Expected 97.5%: r < 1.6485
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_s_18.txt --run blind -n .ttc_s_18 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/st/datacard_countingLFVc_t_Run17.txt --run blind -n .st_c_t_Run17 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 41.9763
-Expected 16.0%: r < 56.2190
-Expected 50.0%: r < 78.4375
-Expected 84.0%: r < 110.0157
-Expected 97.5%: r < 147.6625
+Expected  2.5%: r < 0.1012
+Expected 16.0%: r < 0.1360
+Expected 50.0%: r < 0.1904
+Expected 84.0%: r < 0.2679
+Expected 97.5%: r < 0.3615
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_v_18.txt --run blind -n .ttc_v_18 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/st/datacard_countingLFVu_s_Run17.txt --run blind -n .st_u_s_Run17 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 5.5606
-Expected 16.0%: r < 7.4473
-Expected 50.0%: r < 10.3906
-Expected 84.0%: r < 14.5738
-Expected 97.5%: r < 19.5609
+Expected  2.5%: r < 0.1806
+Expected 16.0%: r < 0.2407
+Expected 50.0%: r < 0.3375
+Expected 84.0%: r < 0.4761
+Expected 97.5%: r < 0.6416
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttc_t_18.txt --run blind -n .ttc_t_18 --rMin 0.0001 --rMax 100
- <<< Combine >>> 
->>> random number generator seed is 123456
-Will use a-priori expected background instead of a-posteriori one.
->>> method used is AsymptoticLimits
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(model_s) evaluation error, 
- origin       : RooProdPdf::model_s[ modelObs_s * nuisancePdf ]
- message      : getLogVal() top-level p.d.f evaluates to zero
- server values: !pdfs=(modelObs_s = 0/1,nuisancePdf = 1)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset_) evaluation error, 
- origin       : RooNLLVar::nll_model_s__Asymptotic_asimovDataset_[ paramSet=(lumieff18,r) ]
- message      : function value is NAN
- server values: paramSet=(lumieff18 = -0.0242121 +/- 1.78559,r = 50 +/- 61.8228)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset__with_constr) evaluation error, 
- origin       : RooAddition::nll_model_s__Asymptotic_asimovDataset__with_constr[ nll_model_s__Asymptotic_asimovDataset_ + nll_model_s__Asymptotic_asimovDataset__constr ]
- message      : function value is NAN
- server values: !set=(nll_model_s__Asymptotic_asimovDataset_ = -nan,nll_model_s__Asymptotic_asimovDataset__constr = 0.919232)
-
- -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.9407
-Expected 16.0%: r < 1.2599
-Expected 50.0%: r < 1.7578
-Expected 84.0%: r < 2.4655
-Expected 97.5%: r < 3.3092
-
-Done in 0.00 min (cpu), 0.00 min (real)
-
-######################################
-
-Command : combine datacards/datacard_countingLFVttu_s_18.txt --run blind -n .ttu_s_18 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/st/datacard_countingLFVu_v_Run17.txt --run blind -n .st_u_v_Run17 --rMin 0.0001 --rMax 1.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 39.6350
-Expected 16.0%: r < 53.0832
-Expected 50.0%: r < 74.0625
-Expected 84.0%: r < 103.8793
-Expected 97.5%: r < 139.4264
+Expected  2.5%: r < 0.0403
+Expected 16.0%: r < 0.0538
+Expected 50.0%: r < 0.0754
+Expected 84.0%: r < 0.1060
+Expected 97.5%: r < 0.1431
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttu_v_18.txt --run blind -n .ttu_v_18 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/st/datacard_countingLFVu_t_Run17.txt --run blind -n .st_u_t_Run17 --rMin 0.0001 --rMax 0.05
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 5.2261
-Expected 16.0%: r < 6.9994
-Expected 50.0%: r < 9.7656
-Expected 84.0%: r < 13.6972
-Expected 97.5%: r < 18.3843
+Expected  2.5%: r < 0.0096
+Expected 16.0%: r < 0.0125
+Expected 50.0%: r < 0.0175
+Expected 84.0%: r < 0.0245
+Expected 97.5%: r < 0.0330
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
 
-Command : combine datacards/datacard_countingLFVttu_t_18.txt --run blind -n .ttu_t_18 --rMin 0.0001 --rMax 100
+Command : combine newdatacards/tt/datacard_countingLFVc_s_Run17.txt --run blind -n .tt_c_s_Run17 --rMin 0.0001 --rMax 3.0
  <<< Combine >>> 
 >>> random number generator seed is 123456
 Will use a-priori expected background instead of a-posteriori one.
 >>> method used is AsymptoticLimits
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(model_s) evaluation error, 
- origin       : RooProdPdf::model_s[ modelObs_s * nuisancePdf ]
- message      : getLogVal() top-level p.d.f evaluates to zero
- server values: !pdfs=(modelObs_s = 0/1,nuisancePdf = 1)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset_) evaluation error, 
- origin       : RooNLLVar::nll_model_s__Asymptotic_asimovDataset_[ paramSet=(lumieff18,r) ]
- message      : function value is NAN
- server values: paramSet=(lumieff18 = -0.02576 +/- 1.78539,r = 50 +/- 22.2559)
-[#0] ERROR:Eval -- RooAbsReal::logEvalError(nll_model_s__Asymptotic_asimovDataset__with_constr) evaluation error, 
- origin       : RooAddition::nll_model_s__Asymptotic_asimovDataset__with_constr[ nll_model_s__Asymptotic_asimovDataset_ + nll_model_s__Asymptotic_asimovDataset__constr ]
- message      : function value is NAN
- server values: !set=(nll_model_s__Asymptotic_asimovDataset_ = -nan,nll_model_s__Asymptotic_asimovDataset__constr = 0.91927)
 
  -- AsymptoticLimits ( CLs ) --
-Expected  2.5%: r < 0.8858
-Expected 16.0%: r < 1.1864
-Expected 50.0%: r < 1.6553
-Expected 84.0%: r < 2.3217
-Expected 97.5%: r < 3.1161
+Expected  2.5%: r < 55.0676
+Expected 16.0%: r < 73.7521
+Expected 50.0%: r < 102.9000
+Expected 84.0%: r < 144.7367
+Expected 97.5%: r < 195.3182
 
 Done in 0.00 min (cpu), 0.00 min (real)
 
 ######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVc_v_Run17.txt --run blind -n .tt_c_v_Run17 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 6.7931
+Expected 16.0%: r < 9.0981
+Expected 50.0%: r < 12.6938
+Expected 84.0%: r < 17.8041
+Expected 97.5%: r < 24.0591
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVc_t_Run17.txt --run blind -n .tt_c_t_Run17 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 1.0084
+Expected 16.0%: r < 1.3438
+Expected 50.0%: r < 1.8844
+Expected 84.0%: r < 2.6430
+Expected 97.5%: r < 3.5474
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVu_s_Run17.txt --run blind -n .tt_u_s_Run17 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 38.6918
+Expected 16.0%: r < 51.8200
+Expected 50.0%: r < 72.3000
+Expected 84.0%: r < 101.4073
+Expected 97.5%: r < 137.0338
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVu_v_Run17.txt --run blind -n .tt_u_v_Run17 --rMin 0.0001 --rMax 1.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 4.2277
+Expected 16.0%: r < 5.6622
+Expected 50.0%: r < 7.9000
+Expected 84.0%: r < 11.0805
+Expected 97.5%: r < 14.9733
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVu_t_Run17.txt --run blind -n .tt_u_t_Run17 --rMin 0.0001 --rMax 0.05
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.4649
+Expected 16.0%: r < 0.6227
+Expected 50.0%: r < 0.8688
+Expected 84.0%: r < 1.2220
+Expected 97.5%: r < 1.6490
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/st/datacard_countingLFVc_s_Run18.txt --run blind -n .st_c_s_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 1.9868
+Expected 16.0%: r < 2.6609
+Expected 50.0%: r < 3.7125
+Expected 84.0%: r < 5.2219
+Expected 97.5%: r < 7.0468
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/st/datacard_countingLFVc_v_Run18.txt --run blind -n .st_c_v_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.4214
+Expected 16.0%: r < 0.5644
+Expected 50.0%: r < 0.7875
+Expected 84.0%: r < 1.1077
+Expected 97.5%: r < 1.4948
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/st/datacard_countingLFVc_t_Run18.txt --run blind -n .st_c_t_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.0925
+Expected 16.0%: r < 0.1239
+Expected 50.0%: r < 0.1729
+Expected 84.0%: r < 0.2431
+Expected 97.5%: r < 0.3281
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/st/datacard_countingLFVu_s_Run18.txt --run blind -n .st_u_s_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.1637
+Expected 16.0%: r < 0.2192
+Expected 50.0%: r < 0.3059
+Expected 84.0%: r < 0.4314
+Expected 97.5%: r < 0.5814
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/st/datacard_countingLFVu_v_Run18.txt --run blind -n .st_u_v_Run18 --rMin 0.0001 --rMax 1.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.0366
+Expected 16.0%: r < 0.0490
+Expected 50.0%: r < 0.0684
+Expected 84.0%: r < 0.0964
+Expected 97.5%: r < 0.1299
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/st/datacard_countingLFVu_t_Run18.txt --run blind -n .st_u_t_Run18 --rMin 0.0001 --rMax 0.05
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.0084
+Expected 16.0%: r < 0.0116
+Expected 50.0%: r < 0.0158
+Expected 84.0%: r < 0.0223
+Expected 97.5%: r < 0.0299
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVc_s_Run18.txt --run blind -n .tt_c_s_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 34.2768
+Expected 16.0%: r < 45.9069
+Expected 50.0%: r < 64.0500
+Expected 84.0%: r < 90.0912
+Expected 97.5%: r < 121.5756
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVc_v_Run18.txt --run blind -n .tt_c_v_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 4.2244
+Expected 16.0%: r < 5.6577
+Expected 50.0%: r < 7.8938
+Expected 84.0%: r < 11.0717
+Expected 97.5%: r < 14.9614
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVc_t_Run18.txt --run blind -n .tt_c_t_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.6246
+Expected 16.0%: r < 0.8366
+Expected 50.0%: r < 1.1672
+Expected 84.0%: r < 1.6417
+Expected 97.5%: r < 2.2155
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVu_s_Run18.txt --run blind -n .tt_u_s_Run18 --rMin 0.0001 --rMax 3.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 24.0419
+Expected 16.0%: r < 32.1994
+Expected 50.0%: r < 44.9250
+Expected 84.0%: r < 63.1904
+Expected 97.5%: r < 85.2738
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVu_v_Run18.txt --run blind -n .tt_u_v_Run18 --rMin 0.0001 --rMax 1.0
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 2.6290
+Expected 16.0%: r < 3.5210
+Expected 50.0%: r < 4.9125
+Expected 84.0%: r < 6.9098
+Expected 97.5%: r < 9.3246
+
+Done in 0.00 min (cpu), 0.00 min (real)
+
+######################################
+
+Command : combine newdatacards/tt/datacard_countingLFVu_t_Run18.txt --run blind -n .tt_u_t_Run18 --rMin 0.0001 --rMax 0.05
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+Will use a-priori expected background instead of a-posteriori one.
+>>> method used is AsymptoticLimits
+
+ -- AsymptoticLimits ( CLs ) --
+Expected  2.5%: r < 0.2897
+Expected 16.0%: r < 0.3879
+Expected 50.0%: r < 0.5412
+Expected 84.0%: r < 0.7592
+Expected 97.5%: r < 1.0259
+
+Done in 0.00 min (cpu), 0.00 min (real)
 
