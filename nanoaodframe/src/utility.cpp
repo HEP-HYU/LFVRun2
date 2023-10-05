@@ -336,7 +336,6 @@ floats sort_discriminant( floats discr, floats obj ){
 }
 
 ints find_element(ints vec, int a){
-    std::cout << "find element a = " << a << ": ";
     if (a == 999) {
         a = 1;
     }
@@ -344,14 +343,11 @@ ints find_element(ints vec, int a){
     for(int i = 0; i < int(vec.size()); i++){
         if( vec[i] == a ) {
             idx.emplace_back(i);
-            std::cout << i << " ";
         }
     }
     if (idx.size() == 0) {
         idx.emplace_back(-1);
-        std::cout << -1;
     }
-    std::cout << std::endl;
     return idx;
 }
 int Find_element(ints vec, int a){
@@ -426,9 +422,7 @@ ints FinalGenPart_idx( ints GenPart_pdgId, ints GenPart_genPartIdxMother ){
     int W1_idx=-1, W2_idx=-1;
     ints Wds_i;
     ints LastTop_idx = LastGenPart_idx(6, GenPart_pdgId, GenPart_genPartIdxMother);
-    std::cout << "FinalGenPart_idx: ";
     for( int i : LastTop_idx ){
-        std::cout << i << ", ";
         ints ds_idx = find_element(GenPart_genPartIdxMother, i);
         for( int d_idx : ds_idx ){
             int d_id = GenPart_pdgId[d_idx];
@@ -454,9 +448,6 @@ ints FinalGenPart_idx( ints GenPart_pdgId, ints GenPart_genPartIdxMother ){
                     Wq1_idx = W1_idx;
                     Wq2_idx = W2_idx;
                     SMhadtop_idx = i;
-                    std::cout<<"hadtop: " << W1_idx << " " << W2_idx << std::endl;
-                } else{
-                    std::cout<<"can not found hadtop: " << W1_idx << " " << W2_idx << std::endl;
                 }
             }
         }
@@ -469,8 +460,6 @@ ints FinalGenPart_idx( ints GenPart_pdgId, ints GenPart_genPartIdxMother ){
             }
         }
     }
-    if ( b_idx < 0 ) std::cout << "b is not found!" << std::endl;
-    std::cout << " " << std::endl;
     out.emplace_back(up_idx);
     out.emplace_back(muon_idx);
     out.emplace_back(tau_idx);
@@ -479,7 +468,6 @@ ints FinalGenPart_idx( ints GenPart_pdgId, ints GenPart_genPartIdxMother ){
     out.emplace_back(Wq2_idx);
     out.emplace_back(LFVtop_idx);
     out.emplace_back(SMtop_idx);
-    std::cout << "FinalGenPart_idx done!" << std::endl;
 
     return out;
 }
@@ -506,12 +494,6 @@ ints dRmatching_binary( int origin_i,float maxdR,  floats origin_pt, floats orig
         if( j == int(target_i) )target_binary.emplace_back(1);
         else target_binary.emplace_back(0);
     }
-    std::cout << "dRmatching_binaryi: ";
-    for (int i: target_binary){
-        std::cout << i << " ";
-    }
-    std::cout << std::endl;
-
     return target_binary;
 }
 
