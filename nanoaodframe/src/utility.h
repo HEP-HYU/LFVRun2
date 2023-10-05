@@ -92,6 +92,8 @@ floats sort_discriminant( floats discr, floats obj );
 
 ints find_element(ints vec, int a);
 
+int Find_element(ints vec, int a);
+
 ints find_element_binary( ints vec, int a);
 
 ints LastGenPart_idx( int target_id, ints GenPart_pdgId, ints GenPart_genPartIdxMother);
@@ -101,6 +103,8 @@ int lastgenpart_idx(int target_i, ints GenPart_pdgId, ints GenPart_genPartIdxMot
 ints FinalGenPart_idx( ints GenPart_pdgId, ints GenPart_genPartIdxMother);
 
 ints dRmatching_binary( int origin_i,float maxdR,  floats origin_pt, floats origin_eta, floats origin_phi, floats origin_mass, floats target_pt, floats target_eta, floats target_phi, floats target_mass);
+
+float SumMass2( FourVectorVec object1, FourVectorVec object2);
 
 float SumMass( FourVectorVec object1, FourVectorVec object2, FourVectorVec object3);
 

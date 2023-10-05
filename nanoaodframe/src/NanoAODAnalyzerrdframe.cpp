@@ -225,6 +225,7 @@ void NanoAODAnalyzerrdframe::setupAnalysis() {
         selectJets(jes_var);
         if (!_isData){
             topPtReweight();
+            matchGenReco();
         }
     }
     defineMoreVars();
@@ -1236,7 +1237,10 @@ void NanoAODAnalyzerrdframe::selectTaus() {
 }
 
 void NanoAODAnalyzerrdframe::matchGenReco() {
-
+    cout << "match Gen Reco" << endl;
+    cout << "columns: " <<endl;
+    for (const auto& name: _rlm.GetColumnNames()) cout << name << ", ";
+    cout << endl;
     _rlm = _rlm.Define("FinalGenPart_idx", ::FinalGenPart_idx, {"GenPart_pdgId", "GenPart_genPartIdxMother"})
                .Define("GenPart_LFVup_idx", "FinalGenPart_idx[0]")
                .Define("GenPart_LFVmuon_idx", "FinalGenPart_idx[1]")
@@ -1249,30 +1253,59 @@ void NanoAODAnalyzerrdframe::matchGenReco() {
 
     _rlm = _rlm.Define("drmax1", "float(0.15)")
                .Define("drmax2", "float(0.4)")
-               .Define("Muon_matched", ::dRmatching_binary,{"GenPart_LFVmuon_idx","drmax1","GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","Muon_pt","Muon_eta","Muon_phi","Muon_mass"})
-               .Define("Tau_matched",::dRmatching_binary,{"GenPart_LFVtau_idx","drmax2", "GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","Tau_pt","Tau_eta","Tau_phi","Tau_mass"})
-               .Define("Jet_LFVup_matched",::dRmatching_binary,{"GenPart_LFVup_idx","drmax2","GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","Jet_pt","Jet_eta","Jet_phi","Jet_mass"})
-               .Define("Jet_SMb_matched",::dRmatching_binary,{"GenPart_SMb_idx","drmax2","GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","Jet_pt","Jet_eta","Jet_phi","Jet_mass"})
-               .Define("Jet_SMW1_matched",::dRmatching_binary,{"GenPart_SMW1_idx","drmax2","GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","Jet_pt","Jet_eta","Jet_phi","Jet_mass"})
-               .Define("Jet_SMW2_matched",::dRmatching_binary,{"GenPart_SMW2_idx","drmax2", "GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","Jet_pt","Jet_eta","Jet_phi","Jet_mass"})
-               .Define("Sel_muon_matched","Muon_matched[muoncuts]")
-               .Define("Sel_tau_matched","Tau_matched[seltaucuts]")
-               .Define("Sel2_LFVupjet_matched","Jet_LFVup_matched[jetcuts][muonjetoverlap][taujetoverlap]")
-               .Define("Sel2_SMbjet_matched","Jet_SMb_matched[jetcuts][muonjetoverlap][taujetoverlap]")
-               .Define("Sel2_SMW1jet_matched","Jet_SMW1_matched[jetcuts][muonjetoverlap][taujetoverlap]")
-               .Define("Sel2_SMW2jet_matched","Jet_SMW2_matched[jetcuts][muonjetoverlap][taujetoverlap]")
-               .Define("Sel_muonmatched_idx","ArgMax(Sel_muon_matched)")
-               .Define("Sel_taumatched_idx","ArgMax(Sel_tau_matched)")
-               .Define("Sel2_LFVupjet_matched_idx","ArgMax(Sel2_LFVupjet_matched)")
-               .Define("Sel2_SMbjet_matched_idx","ArgMax(Sel2_SMbjet_matched)")
-               .Define("Sel2_SMW1jet_matched_idx","ArgMax(Sel2_SMW1jet_matched)")
-               .Define("Sel2_SMW2jet_matched_idx","ArgMax(Sel2_SMW2jet_matched)")
-               .Define("nmuonmatched", "Sum(Muon_matched)")
-               .Define("ntaumatched", "Sum(Tau_matched)")
-               .Define("nJet_LFVup_matched", "Sum(Jet_LFVup_matched)")
+               .Define("GenJet_SMb_matched",::dRmatching_binary,{"GenPart_SMb_idx","drmax2","GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","GenJet_pt","GenJet_eta","GenJet_phi","GenJet_mass"})
+               .Define("GenJet_SMW1_matched",::dRmatching_binary,{"GenPart_SMW1_idx","drmax2","GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","GenJet_pt","GenJet_eta","GenJet_phi","GenJet_mass"})
+               .Define("GenJet_SMW2_matched",::dRmatching_binary,{"GenPart_SMW2_idx","drmax2", "GenPart_pt","GenPart_eta","GenPart_phi","GenPart_mass","GenJet_pt","GenJet_eta","GenJet_phi","GenJet_mass"})
+               .Define("bin1", "int (1)")
+               .Define("GenJet_SMb_idx", ::Find_element, {"GenJet_SMb_matched","bin1"})
+               .Define("GenJet_SMW1_idx", ::Find_element, {"GenJet_SMW1_matched","bin1"})
+               .Define("GenJet_SMW2_idx", ::Find_element, {"GenJet_SMW2_matched","bin1"})
+               .Define("Jet_SMb_matched",::dRmatching_binary,{"GenJet_SMb_idx","drmax2","GenJet_pt","GenJet_eta","GenJet_phi","GenJet_mass","Jet_pt","Jet_eta","Jet_phi","Jet_mass"})
+               .Define("Jet_SMW1_matched",::dRmatching_binary,{"GenJet_SMW1_idx","drmax2","GenJet_pt","GenJet_eta","GenJet_phi","GenJet_mass","Jet_pt","Jet_eta","Jet_phi","Jet_mass"})
+               .Define("Jet_SMW2_matched",::dRmatching_binary,{"GenJet_SMW2_idx","drmax2", "GenJet_pt","GenJet_eta","GenJet_phi","GenJet_mass","Jet_pt","Jet_eta","Jet_phi","Jet_mass"})
+               .Define("SMb_matched_idx", ::Find_element, {"Jet_SMb_matched", "bin1"})
+               .Define("SMW1_matched_idx", ::Find_element, {"Jet_SMW1_matched", "bin1"})
+               .Define("SMW2_matched_idx", ::Find_element, {"Jet_SMW2_matched", "bin1"})
                .Define("nJet_SMb_matched", "Sum(Jet_SMb_matched)")
                .Define("nJet_SMW1_matched", "Sum(Jet_SMW1_matched)")
                .Define("nJet_SMW2_matched", "Sum(Jet_SMW2_matched)");
+
+    _rlm = _rlm.Define("nGenJet_SMb_matched", "Sum(GenJet_SMb_matched)")
+               .Define("nGenJet_SMW1_matched", "Sum(GenJet_SMW1_matched)")
+               .Define("nGenJet_SMW2_matched", "Sum(GenJet_SMW2_matched)");
+
+    _rlm = _rlm.Define("GenJet_SMbmatched_pt","GenJet_pt[GenJet_SMb_matched]")
+               .Define("GenJet_SMbmatched_eta","GenJet_eta[GenJet_SMb_matched]")
+               .Define("GenJet_SMbmatched_phi","GenJet_phi[GenJet_SMb_matched]")
+               .Define("GenJet_SMbmatched_mass","GenJet_mass[GenJet_SMb_matched]")
+               .Define("GenJet_SMbmatched_4vecs", ::gen4vec, {"GenJet_SMbmatched_pt","GenJet_SMbmatched_eta","GenJet_SMbmatched_phi","GenJet_SMbmatched_mass"})
+               .Define("GenJet_SMW1matched_pt","GenJet_pt[GenJet_SMW1_matched]")
+               .Define("GenJet_SMW1matched_eta","GenJet_eta[GenJet_SMW1_matched]")
+               .Define("GenJet_SMW1matched_phi","GenJet_phi[GenJet_SMW1_matched]")
+               .Define("GenJet_SMW1matched_mass","GenJet_mass[GenJet_SMW1_matched]")
+               .Define("GenJet_SMW1matched_4vecs", ::gen4vec, {"GenJet_SMW1matched_pt","GenJet_SMW1matched_eta","GenJet_SMW1matched_phi","GenJet_SMW1matched_mass"})
+               .Define("GenJet_SMW2matched_pt","GenJet_pt[GenJet_SMW2_matched]")
+               .Define("GenJet_SMW2matched_eta","GenJet_eta[GenJet_SMW2_matched]")
+               .Define("GenJet_SMW2matched_phi","GenJet_phi[GenJet_SMW2_matched]")
+               .Define("GenJet_SMW2matched_mass","GenJet_mass[GenJet_SMW2_matched]")
+               .Define("GenJet_SMW2matched_4vecs",::gen4vec, {"GenJet_SMW2matched_pt","GenJet_SMW2matched_eta","GenJet_SMW2matched_phi","GenJet_SMW2matched_mass"});
+
+    _rlm = _rlm.Define("Jet_SMbmatched_pt","Jet_pt[Jet_SMb_matched]")
+               .Define("Jet_SMbmatched_eta","Jet_eta[Jet_SMb_matched]")
+               .Define("Jet_SMbmatched_phi","Jet_phi[Jet_SMb_matched]")
+               .Define("Jet_SMbmatched_mass","Jet_mass[Jet_SMb_matched]")
+               .Define("Jet_SMbmatched_4vecs", ::gen4vec, {"Jet_SMbmatched_pt","Jet_SMbmatched_eta","Jet_SMbmatched_phi","Jet_SMbmatched_mass"})
+               .Define("Jet_SMW1matched_pt","Jet_pt[Jet_SMW1_matched]")
+               .Define("Jet_SMW1matched_eta","Jet_eta[Jet_SMW1_matched]")
+               .Define("Jet_SMW1matched_phi","Jet_phi[Jet_SMW1_matched]")
+               .Define("Jet_SMW1matched_mass","Jet_mass[Jet_SMW1_matched]")
+               .Define("Jet_SMW1matched_4vecs", ::gen4vec, {"Jet_SMW1matched_pt","Jet_SMW1matched_eta","Jet_SMW1matched_phi","Jet_SMW1matched_mass"})
+               .Define("Jet_SMW2matched_pt","Jet_pt[Jet_SMW2_matched]")
+               .Define("Jet_SMW2matched_eta","Jet_eta[Jet_SMW2_matched]")
+               .Define("Jet_SMW2matched_phi","Jet_phi[Jet_SMW2_matched]")
+               .Define("Jet_SMW2matched_mass","Jet_mass[Jet_SMW2_matched]")
+               .Define("Jet_SMW2matched_4vecs",::gen4vec, {"Jet_SMW2matched_pt","Jet_SMW2matched_eta","Jet_SMW2matched_phi","Jet_SMW2matched_mass"});
+    cout << "match Gen Reco ended" << endl;
 }
 
 void NanoAODAnalyzerrdframe::selectFatJets() {

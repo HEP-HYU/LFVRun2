@@ -37,6 +37,14 @@ void TopLFVAnalyzer::defineCuts() {
     addCuts("mutau_charge < 0", "000");
     addCuts("ncleanjetspass >= 3", "0000");
     addCuts("ncleanbjetspass == 1", "00000");
+    //addCuts("nmuonmatched==1 && ntaumatched==1 && nJet_SMb_matched==1 && nJet_SMW1_matched==1 && nJet_SMW2_matched==1", "000000");
+    //addCuts("ntaumatched==1 && nJet_SMb_matched==1 && nJet_SMW1_matched==1 && nJet_SMW2_matched==1", "000000");
+    //addCuts("nGenJet_SMb_matched==1 && nGenJet_SMW1_matched==1 && nGenJet_SMW2_matched==1", "000000");
+    //addCuts("nJet_SMb_matched==1 && nJet_SMW1_matched==1 && nJet_SMW2_matched==1", "000000");
+    //addCuts("nJet_SMb_matched==1", "000000");
+
+    // Control Region
+    //addCuts("ncleanbjetspass > 1", "00000");
 }
 
 void TopLFVAnalyzer::defineMoreVars() {
@@ -141,6 +149,18 @@ void TopLFVAnalyzer::defineMoreVars() {
     addVar({"chi2_wqq_dEta","top_reco_prod[0]",""});
     addVar({"chi2_wqq_dPhi","top_reco_prod[1]",""});
     addVar({"chi2_wqq_dR","top_reco_prod[2]",""});
+
+    //addVar({"SMb_idx", "SMb_matched_idx[0]", ""});
+    //addVar({"SMW1_idx","SMW1_matched_idx[0]", ""});
+    //addVar({"SMW2_idx","SMW2_matched_idx[0]", ""});
+    addVar({"SMb_idx", "SMb_matched_idx", ""});
+    addVar({"SMW1_idx","SMW1_matched_idx", ""});
+    addVar({"SMW2_idx","SMW2_matched_idx", ""});
+
+    //defineVar("gen_SMtop_mass", ::SumMass, {"Jet_SMbmatched_4vecs", "Jet_SMW1matched_4vecs", "Jet_SMW2matched_4vecs"});
+    //defineVar("gen_SMW_mass", ::SumMass2, {"Jet_SMW1matched_4vecs", "Jet_SMW2matched_4vecs"});
+    //defineVar("gen_GenSMtop_mass", ::SumMass, {"GenJet_SMbmatched_4vecs", "GenJet_SMW1matched_4vecs", "GenJet_SMW2matched_4vecs"});
+    //defineVar("gen_GenSMW_mass", ::SumMass2, {"GenJet_SMW1matched_4vecs", "GenJet_SMW2matched_4vecs"});
 
 
     // EventWeights
@@ -380,6 +400,16 @@ void TopLFVAnalyzer::defineMoreVars() {
     addVartoStore("btagWeight_DeepFlavB_jes");
     addVartoStore("eventWeight.*");
     addVartoStore("TopPtWeight");
+    addVartoStore("nJet_SMb_matched");
+    addVartoStore("nJet_SMW1_matched");
+    addVartoStore("nJet_SMW2_matched");
+    addVartoStore("SMb_idx");
+    addVartoStore("SMW1_idx");
+    addVartoStore("SMW2_idx");
+    //addVartoStore("gen_SMtop_mass");
+    //addVartoStore("gen_SMW_mass");
+    //addVartoStore("gen_GenSMtop_mass");
+    //addVartoStore("gen_GenSMW_mass");
 }
 
 void TopLFVAnalyzer::bookHists() {
@@ -566,6 +596,11 @@ void TopLFVAnalyzer::bookHists() {
         add1DHist({"h_chi2_wqq_dEta", ";#Delta#eta of jets from W;Events", 25, -5, 5}, "chi2_wqq_dEta", "eventWeight", weightstr, minstep_S5, maxstep);
         add1DHist({"h_chi2_wqq_dPhi", ";#Delta#phi of jets from W;Events;", 20, -4, 4}, "chi2_wqq_dPhi", "eventWeight", weightstr, minstep_S5, maxstep);
         add1DHist({"h_chi2_wqq_dR", ";#Delta R of jets from W;Events", 20, 0, 4.0}, "chi2_wqq_dR", "eventWeight", weightstr, minstep_S5, maxstep);
+
+        //add1DHist( {"h_GenSMTop_mass", "Gen matching mass of SM top", 80, 0, 400}, "gen_GenSMtop_mass", "eventWeight", weightstr, "000000", maxstep);
+        //add1DHist( {"h_GenSMW_mass", "Gen matching mass of SM W", 80, 0, 400}, "gen_GenSMW_mass", "eventWeight", weightstr, "000000", maxstep);
+        //add1DHist( {"h_SMTop_mass", "Gen matching mass of SM top", 80, 0, 400}, "gen_SMtop_mass", "eventWeight", weightstr, "000000", maxstep);
+        //add1DHist( {"h_SMW_mass", "Gen matching mass of SM W", 80, 0, 400}, "gen_SMW_mass", "eventWeight", weightstr, "000000", maxstep);
     }
 
 }
