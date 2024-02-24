@@ -24,6 +24,7 @@ def store_file(it):
     path = it[0]
     file_name = it[1]
     for f in file_name:
+        print("THE PATH: " , path)
         print(os.path.join(path, f[:f.rfind('_')] + '.root'))
         ftmp = TFile.Open(os.path.join(path, f[:f.rfind('_')] + '.root'), 'READ')
 
@@ -36,7 +37,8 @@ def store_file(it):
 
         ntmp = ftmp.Get("hcounter").GetBinContent(2)
 
-        dest_name = path.split('/')[0] + '/Run2/' + f
+        dest_name = input + '/Run2/' + f
+        print("destination :", dest_name)
         dest = TFile.Open(dest_name, 'RECREATE')
         dest.cd()
         hcounter.Write()
@@ -49,7 +51,7 @@ def store_file(it):
             if "hcounter" in hist:
                 htmp.Write()
             else:
-                htmp.Scale(lumi_dict[path.split('/')[1].split('_')[0]]/ntmp)
+                htmp.Scale(lumi_dict[path.split("_postprocess")[0].split("/")[-1:][0]]/ntmp)
                 dest.cd()
                 htmp.Write()
         dest.Write()

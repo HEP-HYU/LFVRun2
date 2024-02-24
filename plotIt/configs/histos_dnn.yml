@@ -1,0 +1,20 @@
+'h_dnn_pred_S5':
+  x-axis: "DNN Score"
+  y-axis: "Entries"
+  y-axis-format: "%1% / %2$.2f"
+  log-y: true
+  sort-by-yields: true
+  save-extensions: ['pdf']
+  for-yields: true
+  yields-table-order: 0
+  yields-title: 'DNN'
+  ratio-y-axis-range: [0.01, 2]
+  ratio-y-axis-auto-range: false
+  signal-normalize-data: false
+  blinded-range: [5,100]
+  #blinded-range: [0.,0.09]
+#  rebin: 4
+#  labels:
+#  log-x: true
+#    - {text: 'b2j3', position: [0.781, 0.806], size: 18}
+
