@@ -37,6 +37,17 @@ struct hist1dinfo
   std::string maxcutstep;
 } ;
 
+struct hist2dinfo
+{
+  ROOT::RDF::TH2DModel hmodel;
+  std::string varnameX;
+  std::string varnameY;
+  std::string weightname;
+  std::string systname;
+  std::string mincutstep;
+  std::string maxcutstep;
+} ;
+
 
 struct varinfo
 {

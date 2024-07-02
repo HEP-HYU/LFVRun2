@@ -65,6 +65,9 @@ for ds in dataset_list:
     if any(n in ds for n in ['QCD_']):
         continue
 
+    if len(options.mode) > 0 and any(n in ds for n in ['_LFV_']):
+        continue
+
     # will use data/signal in genuine folder
     if 'fakeTau' in options.outdir and any(n in ds for n in ['_LFV_', 'SingleMuon', 'QCD_']):
         continue

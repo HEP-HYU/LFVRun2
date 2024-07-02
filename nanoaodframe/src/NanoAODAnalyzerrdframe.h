@@ -38,6 +38,7 @@ using namespace ROOT::RDF;
 
 class NanoAODAnalyzerrdframe {
   using RDF1DHist = RResultPtr<TH1D>;
+  using RDF2DHist = RResultPtr<TH2D>;
 
 public:
   NanoAODAnalyzerrdframe(std::string infilename, std::string intreename, std::string outfilename, std::string year="", std::string syst="", std::string jsonfname="", string globaltag="", int nthreads=1);
@@ -74,6 +75,7 @@ public:
   void addCuts(std::string cut, std::string idx);
   virtual void defineCuts() = 0; // define a series of cuts from defined variables only. you must implement this in your subclassed analysis code
   void add1DHist(TH1DModel histdef, std::string variable, std::string weight, string syst="", string mincutstep="", string maxcutstep="");
+  void add2DHist(TH2DModel histdef, std::string variableX, std::string variableY, std::string weight, string syst="", string mincutstep="", string maxcutstep="");
   virtual void bookHists() = 0; // book histograms, you must implement this in your subclassed analysis code
 
   void setupCuts_and_Hists();
@@ -131,12 +133,15 @@ private:
   std::vector<std::string> _outrootfilenames;
   RNode _rlm;
   std::map<std::string, RDF1DHist> _th1dhistos;
+  std::map<std::string, RDF2DHist> _th2dhistos;
   //bool helper_1DHistCreator(std::string hname, std::string title, const int nbins, const double xlow, const double xhi, std::string rdfvar, std::string evWeight);
   void helper_1DHistCreator(std::string hname, std::string title, const int nbins, const double xlow, const double xhi, std::string rdfvar, std::string evWeight, RNode *anode);
+  void helper_2DHistCreator(std::string hname, std::string title, const int nbinsx, const double xlow, const double xhi, const int nbinsy, const double ylow, const double yhi, std::string rdfvarX, std::string rdfvarY, std::string evWeight, RNode *anode);
   std::vector<std::string> _originalvars;
   std::vector<std::string> _selections;
 
   std::vector<hist1dinfo> _hist1dinfovector;
+  std::vector<hist2dinfo> _hist2dinfovector;
   std::vector<varinfo> _varinfovector;
   std::vector<cutinfo> _cutinfovector;
 

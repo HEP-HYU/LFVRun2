@@ -9,14 +9,19 @@ isQcd = False
 yield_file = 'yields.tex'
 if isQcd: yield_file = 'qcd/' + yield_file
 
-#year_list = ['2016pre', '2016post', '2017', '2018']
-year_list = ['2018']
+year_list = ['2016pre', '2016post', '2017', '2018']
 
-#binning: 20, 0, 400
+#pt binning: 20, 0, 400
+#hist_name = 'h_tau1_pt_S3'
+#hist_gen_name = 'h_tau1_gen_pt_S3'
+#bin_edges = [[1, -1]]
 #bin_edges = [[1, 7], [8, -1]] #(0-140) (140-inf)
-#bin_edges = [[1, 3], [4, 7], [8, -1]]
-bin_edges = [[1, -1]]
 #bin_edges = [[1, 3], [4, 5], [6, 7], [8, -1]] #(0-60) (60-100) (100-140) (140-inf)
+
+#dm binning: 1, 2, 11, 12 (dm = bin num - 1)
+hist_name = 'h_tau1_decayMode_S3'
+hist_gen_name = 'h_tau1_decayMode_gen_S3'
+bin_edges = [[0, 1], [1, 2], [10, 11], [11, 12]]
 
 #los = loose tau, OS mu tau (C)
 #lss = loose tau, SS mu tau (A)
@@ -45,14 +50,14 @@ for year in year_list:
 
             plot_file = TFile.Open(os.path.join(input_ver + '_' + region, 'figure_'+year, 'plots.root'))
 
-            c_gen = plot_file.Get('h_tau1_gen_pt_S3')
+            c_gen = plot_file.Get(hist_gen_name)
             p_gen = c_gen.GetPrimitive('pad_hi')
             s_gen = p_gen.GetPrimitive('mc_stack_0')
             h_gen = s_gen.GetStack().Last()
             gen_err = ctypes.c_double(0.)
             gen_int = h_gen.IntegralAndError(bin_edge[0], bin_edge[1], gen_err)
 
-            c_all = plot_file.Get('h_tau1_pt_S3')
+            c_all = plot_file.Get(hist_name)
             p_all = c_all.GetPrimitive('pad_hi')
             s_all = p_all.GetPrimitive('mc_stack_0')
             h_all = s_all.GetStack().Last()
@@ -93,5 +98,9 @@ for year in year_list:
         SF_closure = (nevents_region['tos']['nsub_mc'] - fake_closure)/nevents_region['tos']['nsub_mc']
         print('Difference: {0:.4g} %'.format(100 * (nevents_region['tos']['nsub_mc'].n - fake_closure.n)/nevents_region['tos']['nsub_mc'].n))
         print('UNC : {0:.4g}'.format(SF_closure.n), ', systup {0:.4g},'.format(SF.n+SF_closure.n), 'systdown {0:.4g}'.format(SF.n-SF_closure.n))
+
+        print('        map_ff["{0}"]["nom"]  = {1:.4g};'.format(year, SF.n))
+        print('        map_ff["{0}"]["stat"] = {1:.4g};'.format(year, SF.std_dev/SF.n))
+        print('        map_ff["{0}"]["syst"] = {1:.4g};'.format(year, SF_closure.n))
 
         print('/////////////////////////////////////////////////')

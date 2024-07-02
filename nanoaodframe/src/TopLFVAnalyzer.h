@@ -27,7 +27,7 @@ private:
     std::string tauYear = "";
     bool _applytauFF;
     bool _isSignal;
-    static double tauFF(std::string year_, std::string unc_, int direction_, floats &tau_pt_, floats &tau_gen_pt_);
+    static double tauFF(std::string year_, std::string unc_, int direction_, floats &tau_pt_, floats &tau_gen_pt_, ints &tau_dm_);
 
     struct tauFFfunctor {
         std::string year_;
@@ -37,8 +37,8 @@ private:
         tauFFfunctor(std::string year_tmp, std::string unc_tmp, int direction_tmp):
             year_(year_tmp), unc_(unc_tmp), direction_(direction_tmp) {}
 
-        double operator()(floats &tau_pt_, floats &tau_gen_pt_) {
-           return TopLFVAnalyzer::tauFF(year_, unc_, direction_, tau_pt_, tau_gen_pt_);
+        double operator()(floats &tau_pt_, floats &tau_gen_pt_, ints &tau_dm_) {
+           return TopLFVAnalyzer::tauFF(year_, unc_, direction_, tau_pt_, tau_gen_pt_, tau_dm_);
         }
     };
 };

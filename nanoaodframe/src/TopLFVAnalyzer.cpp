@@ -94,11 +94,11 @@ void TopLFVAnalyzer::defineMoreVars() {
         auto tauFF_statdown = tauFFfunctor(_year, "stat", -1);
         auto tauFF_systup = tauFFfunctor(_year, "syst", 1);
         auto tauFF_systdown = tauFFfunctor(_year, "syst", -1);
-        defineVar("tauFF", tauFF_nom, {"Tau_pt", "Tau_pt_gen"});
-        defineVar("tauFFstatup", tauFF_statup, {"Tau_pt", "Tau_pt_gen"});
-        defineVar("tauFFstatdown", tauFF_statdown, {"Tau_pt", "Tau_pt_gen"});
-        defineVar("tauFFsystup", tauFF_systup, {"Tau_pt", "Tau_pt_gen"});
-        defineVar("tauFFsystdown", tauFF_systdown, {"Tau_pt", "Tau_pt_gen"});
+        defineVar("tauFF", tauFF_nom, {"Tau_pt", "Tau_pt_gen", "Tau_decayMode"});
+        defineVar("tauFFstatup", tauFF_statup, {"Tau_pt", "Tau_pt_gen", "Tau_decayMode"});
+        defineVar("tauFFstatdown", tauFF_statdown, {"Tau_pt", "Tau_pt_gen", "Tau_decayMode"});
+        defineVar("tauFFsystup", tauFF_systup, {"Tau_pt", "Tau_pt_gen", "Tau_decayMode"});
+        defineVar("tauFFsystdown", tauFF_systdown, {"Tau_pt", "Tau_pt_gen", "Tau_decayMode"});
     }
     addVar({"unitGenWeightFF", "unitGenWeight * tauFF * UFO_reweight", ""});
 
@@ -603,7 +603,7 @@ void TopLFVAnalyzer::bookHists() {
 
 }
 
-double TopLFVAnalyzer::tauFF(std::string year_, std::string unc_, int direction_, floats &tau_pt_, floats &tau_gen_pt_) {
+double TopLFVAnalyzer::tauFF(std::string year_, std::string unc_, int direction_, floats &tau_pt_, floats &tau_gen_pt_, ints &tau_dm_) {
 
     double val = 1.0;
 
@@ -617,18 +617,22 @@ double TopLFVAnalyzer::tauFF(std::string year_, std::string unc_, int direction_
     std::map<std::string, std::map<std::string, double>> map_ff;
 
     // unc: ratio to nominal
-    map_ff["2016pre"]["nom"]   = 0.5555 ;
-    map_ff["2016pre"]["stat"]  = 0.06578;
-    map_ff["2016pre"]["syst"]  = 0.224  ;
-    map_ff["2016post"]["nom"]  = 0.6094 ;
-    map_ff["2016post"]["stat"] = 0.07114;
-    map_ff["2016post"]["syst"] = 0.04278;
-    map_ff["2017"]["nom"]      = 0.7233 ;
-    map_ff["2017"]["stat"]     = 0.03818;
-    map_ff["2017"]["syst"]     = 0.1292 ;
-    map_ff["2018"]["nom"]      = 0.7393 ;
-    map_ff["2018"]["stat"]     = 0.03239;
-    map_ff["2018"]["syst"]     = 0.08293;
+    //map_ff["2016pre"]["nom"]   = 0.5555 ;
+    //map_ff["2016pre"]["stat"]  = 0.06578;
+    //map_ff["2016pre"]["syst"]  = 0.224  ;
+    //map_ff["2016post"]["nom"]  = 0.6094 ;
+    //map_ff["2016post"]["stat"] = 0.07114;
+    //map_ff["2016post"]["syst"] = 0.04278;
+    //map_ff["2017"]["nom"]      = 0.7233 ;
+    //map_ff["2017"]["stat"]     = 0.03818;
+    //map_ff["2017"]["syst"]     = 0.1292 ;
+    //map_ff["2018"]["nom"]      = 0.7393 ;
+    //map_ff["2018"]["stat"]     = 0.03239;
+    //map_ff["2018"]["syst"]     = 0.08293;
+    //cleaned
+    //map_ff["2018"]["nom"]      = 0.5954 ;
+    //map_ff["2018"]["stat"]     = 0.03254;
+    //map_ff["2018"]["syst"]     = 0.2057 ;
 
     //if (tau_pt_[0] < 140) {
     //    map_ff["2016pre"]["nom"]   = 0.4889 ;
@@ -657,6 +661,62 @@ double TopLFVAnalyzer::tauFF(std::string year_, std::string unc_, int direction_
     //    map_ff["2018"]["stat"]     = 0.1362 ;
     //    map_ff["2018"]["syst"]     = 0.1879 ;
     //}
+
+    if (tau_dm_[0] == 0) {
+        map_ff["2016pre"]["nom"]  = 0.3029;
+        map_ff["2016pre"]["stat"] = 0.1235;
+        map_ff["2016pre"]["syst"] = 0.3515;
+        map_ff["2016post"]["nom"]  = 0.6584;
+        map_ff["2016post"]["stat"] = 0.1212;
+        map_ff["2016post"]["syst"] = 0.3563;
+        map_ff["2017"]["nom"]  = 0.6122;
+        map_ff["2017"]["stat"] = 0.06591;
+        map_ff["2017"]["syst"] = 0.2855;
+        map_ff["2018"]["nom"]  = 0.5042;
+        map_ff["2018"]["stat"] = 0.05853;
+        map_ff["2018"]["syst"] = 0.2186;
+    } else if (tau_dm_[0] == 1) {
+        map_ff["2016pre"]["nom"]  = 0.4542;
+        map_ff["2016pre"]["stat"] = 0.07787;
+        map_ff["2016pre"]["syst"] = 0.2936;
+        map_ff["2016post"]["nom"]  = 0.4853;
+        map_ff["2016post"]["stat"] = 0.08549;
+        map_ff["2016post"]["syst"] = 0.1426;
+        map_ff["2017"]["nom"]  = 0.5715;
+        map_ff["2017"]["stat"] = 0.04472;
+        map_ff["2017"]["syst"] = 0.2421;
+        map_ff["2018"]["nom"]  = 0.5274;
+        map_ff["2018"]["stat"] = 0.03891;
+        map_ff["2018"]["syst"] = 0.1718;
+    } else if (tau_dm_[0] == 10) {
+        map_ff["2016pre"]["nom"]  = 0.5634;
+        map_ff["2016pre"]["stat"] = 0.147;
+        map_ff["2016pre"]["syst"] = 0.3097;
+        map_ff["2016post"]["nom"]  = 0.4488;
+        map_ff["2016post"]["stat"] = 0.159;
+        map_ff["2016post"]["syst"] = 0.2005;
+        map_ff["2017"]["nom"]  = 0.7205;
+        map_ff["2017"]["stat"] = 0.08742;
+        map_ff["2017"]["syst"] = 0.2134;
+        map_ff["2018"]["nom"]  = 0.9003;
+        map_ff["2018"]["stat"] = 0.06959;
+        map_ff["2018"]["syst"] = 0.224;
+    } else if (tau_dm_[0] == 11) {
+        map_ff["2016pre"]["nom"]  = 0.5191;
+        map_ff["2016pre"]["stat"] = 0.1276;
+        map_ff["2016pre"]["syst"] = 0.2643;
+        map_ff["2016post"]["nom"]  = 0.6425;
+        map_ff["2016post"]["stat"] = 0.1324;
+        map_ff["2016post"]["syst"] = 0.1778;
+        map_ff["2017"]["nom"]  = 0.5626;
+        map_ff["2017"]["stat"] = 0.07437;
+        map_ff["2017"]["syst"] = 0.2383;
+        map_ff["2018"]["nom"]  = 0.7733;
+        map_ff["2018"]["stat"] = 0.05948;
+        map_ff["2018"]["syst"] = 0.2118;
+    } else {
+        std::cout << "fatal: wrong decay mode detected" << std::endl;
+    }
 
     if      (unc_ == "nom") val = map_ff[year_][unc_];
     else if (direction_ == 1) val  = 1.0 + map_ff[year_][unc_];

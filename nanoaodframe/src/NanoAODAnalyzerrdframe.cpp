@@ -145,7 +145,9 @@ void NanoAODAnalyzerrdframe::setTree(TTree *t, std::string outfilename) {
 	_rlm = RNode(_rd);
 	_outfilename = outfilename;
 	_hist1dinfovector.clear();
+	_hist2dinfovector.clear();
 	_th1dhistos.clear();
+	_th2dhistos.clear();
 	_varstostore.clear();
 	_selections.clear();
 
@@ -1862,19 +1864,16 @@ void NanoAODAnalyzerrdframe::calculateEvWeight() {
 }
 
 
-
-/*
-bool NanoAODAnalyzerrdframe::helper_1DHistCreator(std::string hname, std::string title, const int nbins, const double xlow, const double xhi, std::string rdfvar, std::string evWeight)
-{
-	RDF1DHist histojets = _rlm.Histo1D({hname.c_str(), title.c_str(), nbins, xlow, xhi}, rdfvar, evWeight); // Fill with weight given by evWeight
-	_th1dhistos[hname] = histojets;
-}
-*/
-
 void NanoAODAnalyzerrdframe::helper_1DHistCreator(std::string hname, std::string title, const int nbins, const double xlow, const double xhi, std::string rdfvar, std::string evWeight, RNode *anode) {
 
 	RDF1DHist histojets = anode->Histo1D({hname.c_str(), title.c_str(), nbins, xlow, xhi}, rdfvar, evWeight); // Fill with weight given by evWeight
 	_th1dhistos[hname] = histojets;
+}
+
+void NanoAODAnalyzerrdframe::helper_2DHistCreator(std::string hname, std::string title, const int nbinsx, const double xlow, const double xhi, const int nbinsy, const double ylow, const double yhi, std::string rdfvarX, std::string rdfvarY, std::string evWeight, RNode *anode) {
+
+	RDF2DHist histojets = anode->Histo2D({hname.c_str(), title.c_str(), nbinsx, xlow, xhi, nbinsy, ylow, yhi}, rdfvarX, rdfvarY, evWeight); // Fill with weight given by evWeight
+	_th2dhistos[hname] = histojets;
 }
 
 // Automatically loop to create
@@ -1891,6 +1890,14 @@ void NanoAODAnalyzerrdframe::setupCuts_and_Hists() {
 
         if (x.mincutstep.length()==0) {
             helper_1DHistCreator(std::string(x.hmodel.fName.Data())+hpost+x.systname,  std::string(x.hmodel.fTitle.Data()), x.hmodel.fNbinsX, x.hmodel.fXLow, x.hmodel.fXUp, x.varname, x.weightname+x.systname, &_rlm);
+        }
+    }
+
+    for (auto &x : _hist2dinfovector) {
+        std::string hpost = "";
+
+        if (x.mincutstep.length()==0) {
+            helper_2DHistCreator(std::string(x.hmodel.fName.Data())+hpost+x.systname,  std::string(x.hmodel.fTitle.Data()), x.hmodel.fNbinsX, x.hmodel.fXLow, x.hmodel.fXUp, x.hmodel.fNbinsY, x.hmodel.fYLow, x.hmodel.fYUp, x.varnameX, x.varnameY, x.weightname+x.systname, &_rlm);
         }
     }
 
@@ -1911,8 +1918,19 @@ void NanoAODAnalyzerrdframe::setupCuts_and_Hists() {
             if (acut.idx.compare(0, x.mincutstep.length(), x.mincutstep)==0) {
                 bool reachedMax = false;
                 if (x.maxcutstep.length() > 0 and acut.idx.compare(0, x.maxcutstep.length(), x.maxcutstep)>=0) reachedMax = true;
-                if (!reachedMax)
+                if (!reachedMax) {
                     helper_1DHistCreator(std::string(x.hmodel.fName.Data())+hpost+x.systname, std::string(x.hmodel.fTitle.Data()), x.hmodel.fNbinsX, x.hmodel.fXLow, x.hmodel.fXUp, x.varname, x.weightname+x.systname, rnext);
+                }
+            }
+        }
+
+        for (auto &x : _hist2dinfovector) {
+            if (acut.idx.compare(0, x.mincutstep.length(), x.mincutstep)==0) {
+                bool reachedMax = false;
+                if (x.maxcutstep.length() > 0 and acut.idx.compare(0, x.maxcutstep.length(), x.maxcutstep)>=0) reachedMax = true;
+                if (!reachedMax) {
+                    helper_2DHistCreator(std::string(x.hmodel.fName.Data())+hpost+x.systname, std::string(x.hmodel.fTitle.Data()), x.hmodel.fNbinsX, x.hmodel.fXLow, x.hmodel.fXUp, x.hmodel.fNbinsY, x.hmodel.fYLow, x.hmodel.fYUp, x.varnameX, x.varnameY, x.weightname+x.systname, rnext);
+                }
             }
         }
         _rnt.addDaughter(rnext, acut.idx);
@@ -1939,6 +1957,11 @@ void NanoAODAnalyzerrdframe::add1DHist(TH1DModel histdef, std::string variable, 
 	_hist1dinfovector.push_back({histdef, variable, weight, syst, mincutstep, maxcutstep});
 }
 
+
+void NanoAODAnalyzerrdframe::add2DHist(TH2DModel histdef, std::string variableX, std::string variableY, std::string weight, string syst, string mincutstep, string maxcutstep) {
+
+	_hist2dinfovector.push_back({histdef, variableX, variableY, weight, syst, mincutstep, maxcutstep});
+}
 
 void NanoAODAnalyzerrdframe::drawHists(RNode t) {
 
@@ -2050,6 +2073,15 @@ void NanoAODAnalyzerrdframe::run(bool saveAll, string outtreename) {
         }
         _outrootfile = new TFile(outname.c_str(),"UPDATE");
         for (auto &h : _th1dhistos) {
+            if (h.second.GetPtr() != nullptr) {
+                h.second.GetPtr()->Print();
+                h.second.GetPtr()->Write();
+                //std::cout<<h.second->GetName()<<std::endl;
+                //h.second->Write();
+                //std::cout<<"Histogram is written"<<std::endl;
+            }
+        }
+        for (auto &h : _th2dhistos) {
             if (h.second.GetPtr() != nullptr) {
                 h.second.GetPtr()->Print();
                 h.second.GetPtr()->Write();

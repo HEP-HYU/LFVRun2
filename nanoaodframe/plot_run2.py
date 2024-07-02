@@ -12,6 +12,8 @@ args = parser.parse_args()
 input = args.input
 yield_only = args.yield_only
 
+syst_avoid = ['muonhighscale', 'metUnclust']
+
 #########################################################
 # WARNING: Do NOT use run2 systematic table!!
 # 1) no proper correlations
@@ -30,6 +32,7 @@ for year, lumi in years.items():
   with open(config_path + 'config_' + year + '.yml') as f:
     lines = f.readlines()
     for line in lines:
+      if any(s in line for s in syst_avoid): continue
       if "  - " in line: common_syst_list.append(line)
 
 common_syst_list = sorted(set(common_syst_list), key=common_syst_list.index)
